@@ -1,9 +1,13 @@
 import React from 'react';
+import { GoMarkGithub } from 'react-icons/go';
+
+import './style.css';
 
 const Header = () => {
   return (
-    <header>
-      <h1>Github</h1>
+    <header className="Header">
+      <GoMarkGithub className="logo" size="2em" />
+      <h1 className="title">Github</h1>
     </header>
   );
 };

@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 
 import Loader from '../common/Loader';
 import { isObjectEmpty } from '../../utils';
-// import { SET_PROFILE, SET_FETCH_STATUS } from '../../store';
 
+// Import Redux Actions
 import { setProfile } from '../../actions/profileActions';
 import { setFetchStatus } from '../../actions/fetchActions';
 
@@ -59,11 +59,14 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
         <Loader />
       ) : (
         <div className="info">
-          <h2>Profile</h2>
-          <span className="name">Name: {name}</span>
-          <span className="username">Username: {login}</span>
+          <div className="avatar-image-wrapper">
+            <img className="avatar-img" src={avatar_url} alt={`${login} Avatar`}></img>
+          </div>
 
-          {company && <span className="company">Company: {company}</span>}
+          <span className="name">{name}</span>
+          <span className="username">{login}</span>
+
+          {company && <span className="company">{company}</span>}
           {bio && <span className="bio">Bio: {bio}</span>}
           {blog && <span className="blog">Blog: {blog}</span>}
           {email && <span className="email">Email: {email}</span>}
@@ -76,7 +79,6 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
 
           {public_repos && <span className="public_repos">Public Repos: {public_repos}</span>}
           {public_gists && <span className="public_gists">Public Gists: {public_gists}</span>}
-          <img src={avatar_url} alt={`${login} Photo`} className="picture"></img>
         </div>
       )}
     </div>
@@ -86,15 +88,14 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
 const mapStateToProps = (state) => {
   console.log(state);
   return {
-    profile: state ? state.profile.profile : {},
-    isFetching: state.fetch.isFetching
+    isFetching: state.fetch.isFetching,
+    profile: state ? state.profile.profile : {}
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     setProfile: (value) => dispatch(setProfile(value)),
-
     setFetchStatus: (flag) => dispatch(setFetchStatus(flag))
   };
 };

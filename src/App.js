@@ -13,7 +13,7 @@ const App = () => {
     <div className="App">
       <Header />
       <Main>
-        <TabNav />
+        <TabNav className="container" />
       </Main>
       <Footer />
     </div>
