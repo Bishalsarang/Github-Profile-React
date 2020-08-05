@@ -60,7 +60,7 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
 
   return (
     <div className="Profile">
-      {isFetching ? (
+      {isFetching || isObjectEmpty(profile) ? (
         <Loader />
       ) : (
         <div className="info">

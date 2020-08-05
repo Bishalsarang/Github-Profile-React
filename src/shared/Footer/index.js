@@ -5,7 +5,7 @@ import './style.css';
 const Footer = () => {
   return (
     <footer className="Footer">
-      <span> © 2020 GitHub, Inc.</span>
+      <span></span>
     </footer>
   );
 };
