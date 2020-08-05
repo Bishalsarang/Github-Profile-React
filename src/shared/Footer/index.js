@@ -1,9 +1,11 @@
 import React from 'react';
 
+import './style.css';
+
 const Footer = () => {
   return (
-    <footer>
-      <span>This is a footer</span>
+    <footer className="Footer">
+      <span> Github</span>
     </footer>
   );
 };

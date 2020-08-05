@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import Loader from '../common/Loader';
+import { isObjectEmpty } from '../../utils';
 
 import { SET_PROFILE, SET_FETCH_STATUS } from '../../store';
 
@@ -31,13 +32,16 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
   } = profile;
 
   useEffect(() => {
-    console.log('Fetching');
-
-    getUserInfo().then((response) => {
-      if (response) {
-        setProfile(response.data);
-      }
-    });
+    if (isObjectEmpty(profile)) {
+      console.log('Fetching', profile);
+      getUserInfo().then((response) => {
+        if (response) {
+          setProfile(response.data);
+        }
+      });
+    } else {
+      console.log('Already fetched');
+    }
   }, [setProfile]);
 
   const getUserInfo = async () => {
