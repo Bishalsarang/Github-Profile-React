@@ -4,5 +4,9 @@
  */
 
 export function isObjectEmpty(obj) {
-  return JSON.stringify(obj) == '{}';
+  return JSON.stringify(obj) === '{}';
+}
+
+export function isArrayEmpty(arr) {
+  return arr.length === 0;
 }

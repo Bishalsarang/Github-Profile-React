@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 import Loader from '../common/Loader';
 import { isObjectEmpty } from '../../utils';
-
 import { SET_PROFILE, SET_FETCH_STATUS } from '../../store';
 
 import * as API from '../../Services/API';
@@ -46,7 +45,7 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
 
   const getUserInfo = async () => {
     setFetchStatus(true);
-    const response = await API.fetchUser(constant.USER_NAME).then((response) => response);
+    const response = await API.fetchUrl(constant.API_USER_URL).then((response) => response);
     return response;
   };
 
@@ -56,6 +55,7 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
         <Loader />
       ) : (
         <div className="info">
+          <h2>Profile</h2>
           <span className="name">Name: {name}</span>
           <span className="username">Username: {login}</span>
 

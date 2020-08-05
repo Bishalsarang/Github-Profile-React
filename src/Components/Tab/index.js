@@ -2,6 +2,7 @@ import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 import Profile from '../Profile';
+import RepoList from '../RepoList';
 
 import 'react-tabs/style/react-tabs.css';
 
@@ -18,11 +19,10 @@ const TabNav = () => {
         </TabList>
 
         <TabPanel>
-          <h2>Profile</h2>
           <Profile />
         </TabPanel>
         <TabPanel>
-          <h2>Repositories</h2>
+          <RepoList />
         </TabPanel>
         <TabPanel>
           <h2>Followers</h2>
