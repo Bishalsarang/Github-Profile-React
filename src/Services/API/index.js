@@ -7,6 +7,7 @@ const fetchUrl = async (url) => {
     return response;
   } catch (error) {
     console.log(error);
+    return null;
   }
 };
 
