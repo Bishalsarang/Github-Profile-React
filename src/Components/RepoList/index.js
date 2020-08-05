@@ -33,7 +33,6 @@ const RepoList = ({ repoList, isFetching, setRepoList, setFetchStatus }) => {
 
   return (
     <div className="RepoList">
-      <h2 className="header">Repositories</h2>
       {isFetching ? (
         <Loader />
       ) : (

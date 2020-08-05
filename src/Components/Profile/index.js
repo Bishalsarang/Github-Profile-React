@@ -2,34 +2,39 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import Loader from '../common/Loader';
-import { isObjectEmpty } from '../../utils';
+import { isObjectEmpty, getDayMonth } from '../../utils';
 
 // Import Redux Actions
 import { setProfile } from '../../actions/profileActions';
 import { setFetchStatus } from '../../actions/fetchActions';
 
+// Import Icons
+import { BsBriefcase } from 'react-icons/bs';
+import { RiGitRepositoryLine } from 'react-icons/ri';
+import { FaBloggerB } from 'react-icons/fa';
+import { GrLocation, GrUpdate } from 'react-icons/gr';
+
 import * as API from '../../Services/API';
 import * as constant from '../../constants/constants';
+import {} from '../../utils';
 
 import './style.css';
 
 const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
   const {
-    name,
     bio,
+    name,
     blog,
     login,
     email,
     company,
     location,
-    hireable,
-    updated_at,
     followers,
     following,
+    updated_at,
     avatar_url,
     created_at,
     public_repos,
-    public_gists,
     twitter_username
   } = profile;
 
@@ -62,23 +67,36 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
           <div className="avatar-image-wrapper">
             <img className="avatar-img" src={avatar_url} alt={`${login} Avatar`}></img>
           </div>
-
-          <span className="name">{name}</span>
-          <span className="username">{login}</span>
-
-          {company && <span className="company">{company}</span>}
+          <h3 className="name">{name}</h3>
+          <span className="username">@{login}</span>
+          {company && (
+            <span className="company">
+              <BsBriefcase /> {company}
+            </span>
+          )}
           {bio && <span className="bio">Bio: {bio}</span>}
-          {blog && <span className="blog">Blog: {blog}</span>}
+          {blog && (
+            <span className="blog">
+              <FaBloggerB /> {blog}
+            </span>
+          )}
           {email && <span className="email">Email: {email}</span>}
-          {location && <span className="location">Location: {location}</span>}
-          {hireable && <span className="hireable">Hireable: {hireable}</span>}
-          {updated_at && <span className="updated_at">Updated at: {updated_at}</span>}
-          {created_at && <span className="created_at">Created at: {created_at}</span>}
+          {location && (
+            <span className="location">
+              <GrLocation />
+              {location}
+            </span>
+          )}
           {followers && <span className="followers">Followers: {followers}</span>}
           {following && <span className="following">Following: {following}</span>}
-
-          {public_repos && <span className="public_repos">Public Repos: {public_repos}</span>}
-          {public_gists && <span className="public_gists">Public Gists: {public_gists}</span>}
+          {public_repos && (
+            <span className="public_repos">
+              <RiGitRepositoryLine />
+              Repositories {public_repos}
+            </span>
+          )}
+          {updated_at && <span className="updated_at">Updated: {getDayMonth(updated_at)}</span>}
+          {created_at && <span className="created_at">Created: {getDayMonth(created_at)}</span>}
         </div>
       )}
     </div>

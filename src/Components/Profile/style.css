@@ -2,11 +2,19 @@
   padding: 16px;
 }
 
+.Profile .username {
+  color: #666;
+  font-size: 20px;
+  line-height: 24px;
+}
+
 .Profile span {
   display: block;
+  padding: 4px;
 }
 
 .Profile .avatar-img {
   width: 260px;
   border-radius: 50%;
+  cursor: pointer;
 }
