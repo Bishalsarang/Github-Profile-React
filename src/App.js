@@ -5,18 +5,17 @@ import Main from './shared/Main';
 import Header from './shared/Header';
 import Footer from './shared/Footer';
 
+import Profile from './Components/Profile';
+
 import './App.css';
-import { fetchUser } from './Services/API';
 
 const App = () => {
-  const getUserInfo = () => {
-    fetchUser('Bishalsarang').then((response) => console.log(response.data));
-  };
-
   return (
     <div className="App">
       <Header />
-      <Main />
+      <Main>
+        <Profile />
+      </Main>
       <Footer />
     </div>
   );

@@ -15,4 +15,4 @@ const fetchUser = async (userName) => {
   return response;
 };
 
-export { fetchUser };
+export { fetchUrl, fetchUser };
