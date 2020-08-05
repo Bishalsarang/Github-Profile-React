@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  color: white;
+}
+
+.hide {
+  display: none;
+}
+
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
