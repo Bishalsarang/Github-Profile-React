@@ -3,7 +3,10 @@ import { connect } from 'react-redux';
 
 import Loader from '../common/Loader';
 import { isObjectEmpty } from '../../utils';
-import { SET_PROFILE, SET_FETCH_STATUS } from '../../store';
+// import { SET_PROFILE, SET_FETCH_STATUS } from '../../store';
+
+import { setProfile } from '../../actions/profileActions';
+import { setFetchStatus } from '../../actions/fetchActions';
 
 import * as API from '../../Services/API';
 import * as constant from '../../constants/constants';
@@ -36,6 +39,7 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
       getUserInfo().then((response) => {
         if (response) {
           setProfile(response.data);
+          setFetchStatus(false);
         }
       });
     } else {
@@ -80,25 +84,18 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
 };
 
 const mapStateToProps = (state) => {
+  console.log(state);
   return {
-    profile: state ? state.profile : {},
-    isFetching: state.isFetching
+    profile: state ? state.profile.profile : {},
+    isFetching: state.fetch.isFetching
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    setProfile: (value) =>
-      dispatch({
-        type: SET_PROFILE,
-        payload: { profile: value }
-      }),
+    setProfile: (value) => dispatch(setProfile(value)),
 
-    setFetchStatus: (flag) =>
-      dispatch({
-        type: SET_FETCH_STATUS,
-        payload: { flag: flag }
-      })
+    setFetchStatus: (flag) => dispatch(setFetchStatus(flag))
   };
 };
 

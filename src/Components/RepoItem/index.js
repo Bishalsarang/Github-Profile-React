@@ -17,6 +17,7 @@ const RepoItem = (props) => {
     stargazers_url,
     stargazers_count
   } = props.repo;
+
   return (
     <div className="RepoItem">
       <h4 className="title">{name}</h4>
