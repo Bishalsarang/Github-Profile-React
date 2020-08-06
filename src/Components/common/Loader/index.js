@@ -2,9 +2,9 @@ import React from 'react';
 import loader from '../../../assets/images/loader.svg';
 import './style.css';
 
-const Loader = () => (
-  <div style={{ textAlign: 'center' }}>
-    <img src={loader} alt="Loading"></img>
+const Loader = ({ style, height }) => (
+  <div style={style} className="Loader">
+    <img src={loader} alt="Loading" height={height}></img>
   </div>
 );
 

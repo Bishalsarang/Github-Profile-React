@@ -6,13 +6,13 @@ import { BsPeople, BsStar, BsPerson } from 'react-icons/bs';
 
 import Profile from '../Profile';
 import RepoList from '../RepoList';
-import FollowersList from '../FollowersList';
 
 // Import Default Tabs STyle
 import 'react-tabs/style/react-tabs.css';
 
 // Override Default Tabs Style
 import './style.css';
+import UsersList from '../UsersList';
 
 const TabNav = ({ className }) => (
   <div className={className}>
@@ -64,11 +64,11 @@ const TabNav = ({ className }) => (
       </TabPanel>
 
       <TabPanel>
-        <FollowersList />
+        <UsersList selectedComponent="follower" />
       </TabPanel>
 
       <TabPanel>
-        <h2>Followings</h2>
+        <UsersList />
       </TabPanel>
 
       <TabPanel>
