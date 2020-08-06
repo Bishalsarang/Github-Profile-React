@@ -1,7 +1,7 @@
 import { SET_REPO_LIST } from '../../actions/reposActions';
 
 const INITIAL_STATE = {
-  repoList: []
+  repoList: [],
 };
 
 const repoReducer = (state = INITIAL_STATE, action) => {

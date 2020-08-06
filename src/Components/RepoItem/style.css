@@ -1,6 +1,5 @@
 .RepoItem {
   padding: 16px;
-  width: 80%;
   margin: 0px auto;
   border-top: 2px solid #e1e4e8;
 }
@@ -57,4 +56,10 @@
 
 .RepoItem .dates {
   text-align: left;
+}
+
+@media (min-width: 768px) {
+  .RepoItem {
+    width: 80%;
+  }
 }

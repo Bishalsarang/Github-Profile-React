@@ -6,8 +6,8 @@ import profileReducer from './profile';
 
 const reducer = combineReducers({
   repo: repoReducer,
+  fetch: fetchReducer,
   profile: profileReducer,
-  fetch: fetchReducer
 });
 
 export default reducer;

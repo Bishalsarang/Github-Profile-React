@@ -1,0 +1,10 @@
+.Search {
+  padding: 10px;
+}
+
+.Search input {
+  border: 2px solid gray;
+  border-radius: 12px;
+  outline: none;
+  padding: 10px;
+}

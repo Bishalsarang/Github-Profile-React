@@ -1,37 +1,48 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { GoRepoForked, GoStar } from 'react-icons/go';
 
 import { getDayMonth } from '../../utils/index';
-import { MAP_LANGAUGES_TO_COLOR } from '../../constants/constants';
+import { MAP_LANGUAGES_TO_COLOR } from '../../constants/constants';
 
 import './style.css';
 
-const RepoItem = (props) => {
-  const { name, html_url, language, created_at, updated_at, description, forks_count, stargazers_count } = props.repo;
+const RepoItem = ({ repo }) => {
+  const {
+    name,
+    language,
+    description,
+    html_url: htmlUrl,
+    created_at: createdAt,
+    updated_at: updatedAt,
+    forks_count: forksCount,
+    stargazers_count: starGazersCount,
+  } = repo;
 
   return (
     <div className="RepoItem">
-      <a href={html_url} title={name}>
+      <a href={htmlUrl} title={name} target="_blank">
         <h3 className="title">{name}</h3>
       </a>
       <p className="desc">{description}</p>
       <div className="meta">
         <div className="language">
-          <span className="indicator" style={{ background: MAP_LANGAUGES_TO_COLOR[language] }}></span>
+          <span className="indicator" style={{ background: MAP_LANGUAGES_TO_COLOR[language] }}></span>
           <span>{language}</span>
         </div>
         <span className="forks-count">
           <GoRepoForked />
-          {forks_count}
+          {forksCount}
         </span>
         <span className="stargazers_count">
           <GoStar />
-          {stargazers_count}
+          {starGazersCount}
         </span>
       </div>
       <div className="dates">
-        <span className="created-at">Created at: {getDayMonth(created_at)}</span>
-        <span className="updated-at">Updated at: {getDayMonth(updated_at)}</span>
+        <span className="created-at">Created at: {getDayMonth(createdAt)}</span>
+        <span className="updated-at">Updated at: {getDayMonth(updatedAt)}</span>
       </div>
     </div>
   );

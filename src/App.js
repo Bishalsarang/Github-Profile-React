@@ -8,16 +8,14 @@ import Footer from './shared/Footer';
 import './App.css';
 import TabNav from './Components/Tab';
 
-const App = () => {
-  return (
-    <div className="App">
-      <Header />
-      <Main>
-        <TabNav className="container" />
-      </Main>
-      <Footer />
-    </div>
-  );
-};
+const App = () => (
+  <div className="App">
+    <Header />
+    <Main>
+      <TabNav className="container" />
+    </Main>
+    <Footer />
+  </div>
+);
 
 export default App;

@@ -1,7 +1,7 @@
 import { SET_FETCH_STATUS } from '../../actions/fetchActions';
 
 const INITIAL_STATE = {
-  isFetching: false
+  isFetching: false,
 };
 
 const fetchReducer = (state = INITIAL_STATE, action) => {

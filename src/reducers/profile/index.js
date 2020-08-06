@@ -1,7 +1,7 @@
 import { SET_PROFILE } from '../../actions/profileActions';
 
 const INITIAL_STATE = {
-  profile: {}
+  profile: {},
 };
 
 const profileReducer = (state = INITIAL_STATE, action) => {

@@ -3,13 +3,15 @@ import { GoMarkGithub } from 'react-icons/go';
 
 import './style.css';
 
-const Header = () => {
-  return (
-    <header className="Header">
+const Header = () => (
+  <header className="Header">
+    <a href="https://github.com" title="Github Logo">
       <GoMarkGithub className="logo" size="2em" />
+    </a>
+    <a href="https://github.com" title="Github Logo">
       <h1 className="title">Github</h1>
-    </header>
-  );
-};
+    </a>
+  </header>
+);
 
 export default Header;

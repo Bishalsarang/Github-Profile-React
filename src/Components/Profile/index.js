@@ -1,23 +1,26 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react/prop-types */
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
+// Icons
+import { FaBloggerB } from 'react-icons/fa';
+import { GrLocation } from 'react-icons/gr';
+import { BsBriefcase } from 'react-icons/bs';
+import { RiGitRepositoryLine } from 'react-icons/ri';
+
+// UI COmponents
 import Loader from '../common/Loader';
-import { isObjectEmpty, getDayMonth } from '../../utils';
 
 // Import Redux Actions
 import { setProfile } from '../../actions/profileActions';
 import { setFetchStatus } from '../../actions/fetchActions';
 
-// Import Icons
-import { BsBriefcase } from 'react-icons/bs';
-import { RiGitRepositoryLine } from 'react-icons/ri';
-import { FaBloggerB } from 'react-icons/fa';
-import { GrLocation, GrUpdate } from 'react-icons/gr';
-
+// Utils, Constants and API
 import * as API from '../../Services/API';
 import * as constant from '../../constants/constants';
-import {} from '../../utils';
+import { isObjectEmpty, getDayMonth } from '../../utils';
 
+// Styles
 import './style.css';
 
 const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
@@ -31,32 +34,29 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
     location,
     followers,
     following,
-    updated_at,
-    avatar_url,
-    created_at,
-    public_repos,
-    twitter_username
+    updated_at: updatedAt,
+    avatar_url: avatarUrl,
+    created_at: createdAt,
+    public_repos: publicRepos,
   } = profile;
+
+  const getUserInfo = async () => {
+    setFetchStatus(true);
+    const response = await API.fetchUrl(constant.API_USER_URL).then((response) => response);
+
+    return response;
+  };
 
   useEffect(() => {
     if (isObjectEmpty(profile)) {
-      console.log('Fetching', profile);
       getUserInfo().then((response) => {
         if (response) {
           setProfile(response.data);
           setFetchStatus(false);
         }
       });
-    } else {
-      console.log('Already fetched');
     }
   }, [setProfile]);
-
-  const getUserInfo = async () => {
-    setFetchStatus(true);
-    const response = await API.fetchUrl(constant.API_USER_URL).then((response) => response);
-    return response;
-  };
 
   return (
     <div className="Profile">
@@ -65,7 +65,7 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
       ) : (
         <div className="info">
           <div className="avatar-image-wrapper">
-            <img className="avatar-img" src={avatar_url} alt={`${login} Avatar`}></img>
+            <img className="avatar-img" src={avatarUrl} alt={`${login} Avatar`}></img>
           </div>
           <h3 className="name">{name}</h3>
           <span className="username">@{login}</span>
@@ -77,7 +77,9 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
           {bio && <span className="bio">Bio: {bio}</span>}
           {blog && (
             <span className="blog">
-              <FaBloggerB /> {blog}
+              <a href={blog} title="Website">
+                <FaBloggerB /> {blog}
+              </a>
             </span>
           )}
           {email && <span className="email">Email: {email}</span>}
@@ -89,33 +91,28 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
           )}
           {followers && <span className="followers">Followers: {followers}</span>}
           {following && <span className="following">Following: {following}</span>}
-          {public_repos && (
+          {publicRepos && (
             <span className="public_repos">
               <RiGitRepositoryLine />
-              Repositories {public_repos}
+              Repositories {publicRepos}
             </span>
           )}
-          {updated_at && <span className="updated_at">Updated: {getDayMonth(updated_at)}</span>}
-          {created_at && <span className="created_at">Created: {getDayMonth(created_at)}</span>}
+          {updatedAt && <span className="updated_at">Updated: {getDayMonth(updatedAt)}</span>}
+          {createdAt && <span className="created_at">Created: {getDayMonth(createdAt)}</span>}
         </div>
       )}
     </div>
   );
 };
 
-const mapStateToProps = (state) => {
-  console.log(state);
-  return {
-    isFetching: state.fetch.isFetching,
-    profile: state ? state.profile.profile : {}
-  };
-};
+const mapStateToProps = (state) => ({
+  isFetching: state.fetch.isFetching,
+  profile: state ? state.profile.profile : {},
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setProfile: (value) => dispatch(setProfile(value)),
-    setFetchStatus: (flag) => dispatch(setFetchStatus(flag))
-  };
-};
+const mapDispatchToProps = (dispatch) => ({
+  setProfile: (value) => dispatch(setProfile(value)),
+  setFetchStatus: (flag) => dispatch(setFetchStatus(flag)),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Profile);
