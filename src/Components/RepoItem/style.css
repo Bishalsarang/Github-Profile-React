@@ -55,7 +55,8 @@
 }
 
 .RepoItem .dates {
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (min-width: 768px) {

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { setFetchStatus } from '../../actions/fetchActions/index';
 
+import Loader from '../common/Loader';
 import * as API from '../../Services/API';
 import * as constant from '../../constants/constants';
 import { setFollowersList, setFollowingList } from '../../actions/usersActions';
@@ -31,7 +32,6 @@ const UsersList = (props) => {
   }
 
   const getUsersList = async () => {
-    console.log('here');
     setFetchStatus(true);
     const response = await API.fetchUrl(URL).then((response) => response);
 
@@ -46,8 +46,6 @@ const UsersList = (props) => {
           setFetchStatus(false);
         }
       });
-    } else {
-      console.log('already fetched');
     }
   }, []);
 
@@ -70,6 +68,10 @@ const UsersList = (props) => {
       </ul>
     );
   };
+
+  if (isFetching) {
+    return <Loader />;
+  }
 
   return <div className="UsersList">{selectedComponent === 'follower' ? showFollower() : showFollowing()}</div>;
 };
