@@ -7,6 +7,11 @@
   margin-bottom: 10px;
 }
 
+.RepoList .language-selector {
+  padding: 10px;
+  margin-left: 10px;
+}
+
 @media (min-width: 768px) {
   .RepoList .search-input {
     width: 60%;

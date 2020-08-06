@@ -37,6 +37,11 @@
   margin-right: 10px;
 }
 
+.UserItem .work__icon,
+.UserItem .location__icon {
+  padding-right: 8px;
+}
+
 @media (min-width: 768px) {
   .UserItem {
     width: 80%;

@@ -35,23 +35,7 @@ const UserItem = ({ url }) => {
   };
 
   const displayUserInfo = () => {
-    const {
-      bio,
-      name,
-      blog,
-      login,
-      email,
-      company,
-      location,
-      followers,
-      following,
-      updated_at: updatedAt,
-      avatar_url: avatarUrl,
-      created_at: createdAt,
-      public_repos: publicRepos,
-      followers_url: followersUrl,
-      following_url: followingUrl,
-    } = user;
+    const { bio, name, login, company, location, avatar_url: avatarUrl } = user;
 
     return (
       <>
@@ -73,14 +57,18 @@ const UserItem = ({ url }) => {
           <div className="work-location">
             {company && (
               <div className="work">
-                <BsBriefcase />
+                <span className="work__icon">
+                  <BsBriefcase />
+                </span>
                 <span>{company} </span>
               </div>
             )}
 
             {location && (
               <div className="location">
-                <GrLocation />
+                <span className="location__icon">
+                  <GrLocation />
+                </span>
                 <span>{location}</span>
               </div>
             )}

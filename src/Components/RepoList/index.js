@@ -52,7 +52,12 @@ const RepoList = ({ repoList, isFetching, setRepoList, setFetchStatus }) => {
 
   const languageSelector = () => {
     return (
-      <select name="langauges" id="languages" onChange={(e) => setLanguage(e.target[e.target.selectedIndex].text)}>
+      <select
+        className="language-selector"
+        name="langauges"
+        id="languages"
+        onChange={(e) => setLanguage(e.target[e.target.selectedIndex].text)}
+      >
         {constant.LANGUAGES.map((language, index) => (
           <option key={index} style={{ background: constant.MAP_LANGUAGES_TO_COLOR[language] }}>
             {language}
