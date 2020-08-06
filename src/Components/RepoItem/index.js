@@ -22,7 +22,7 @@ const RepoItem = ({ repo }) => {
 
   return (
     <div className="RepoItem">
-      <a href={htmlUrl} title={name} target="_blank">
+      <a href={htmlUrl} title={name} target="_blank" rel="noopener noreferrer">
         <h3 className="title">{name}</h3>
       </a>
       <p className="desc">{description}</p>
