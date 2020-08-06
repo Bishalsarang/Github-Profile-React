@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/Github-Profile-React/static/css/main.76a83c19.chunk.css",
-    "main.js": "/Github-Profile-React/static/js/main.9c8c1126.chunk.js",
-    "main.js.map": "/Github-Profile-React/static/js/main.9c8c1126.chunk.js.map",
+    "main.css": "/Github-Profile-React/static/css/main.40e7cbdf.chunk.css",
+    "main.js": "/Github-Profile-React/static/js/main.b4763f96.chunk.js",
+    "main.js.map": "/Github-Profile-React/static/js/main.b4763f96.chunk.js.map",
     "runtime-main.js": "/Github-Profile-React/static/js/runtime-main.141d8dd5.js",
     "runtime-main.js.map": "/Github-Profile-React/static/js/runtime-main.141d8dd5.js.map",
     "static/css/2.5c17b9f1.chunk.css": "/Github-Profile-React/static/css/2.5c17b9f1.chunk.css",
-    "static/js/2.ab6ff732.chunk.js": "/Github-Profile-React/static/js/2.ab6ff732.chunk.js",
-    "static/js/2.ab6ff732.chunk.js.map": "/Github-Profile-React/static/js/2.ab6ff732.chunk.js.map",
+    "static/js/2.c0bc4558.chunk.js": "/Github-Profile-React/static/js/2.c0bc4558.chunk.js",
+    "static/js/2.c0bc4558.chunk.js.map": "/Github-Profile-React/static/js/2.c0bc4558.chunk.js.map",
     "index.html": "/Github-Profile-React/index.html",
-    "precache-manifest.d75aefb7099a80fc693a6767a2252a81.js": "/Github-Profile-React/precache-manifest.d75aefb7099a80fc693a6767a2252a81.js",
+    "precache-manifest.5fb04a614b012220b590fc3bf0f53802.js": "/Github-Profile-React/precache-manifest.5fb04a614b012220b590fc3bf0f53802.js",
     "service-worker.js": "/Github-Profile-React/service-worker.js",
     "static/css/2.5c17b9f1.chunk.css.map": "/Github-Profile-React/static/css/2.5c17b9f1.chunk.css.map",
-    "static/css/main.76a83c19.chunk.css.map": "/Github-Profile-React/static/css/main.76a83c19.chunk.css.map",
-    "static/js/2.ab6ff732.chunk.js.LICENSE.txt": "/Github-Profile-React/static/js/2.ab6ff732.chunk.js.LICENSE.txt",
+    "static/css/main.40e7cbdf.chunk.css.map": "/Github-Profile-React/static/css/main.40e7cbdf.chunk.css.map",
+    "static/js/2.c0bc4558.chunk.js.LICENSE.txt": "/Github-Profile-React/static/js/2.c0bc4558.chunk.js.LICENSE.txt",
     "static/media/loader.svg": "/Github-Profile-React/static/media/loader.236d70a3.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.141d8dd5.js",
     "static/css/2.5c17b9f1.chunk.css",
-    "static/js/2.ab6ff732.chunk.js",
-    "static/css/main.76a83c19.chunk.css",
-    "static/js/main.9c8c1126.chunk.js"
+    "static/js/2.c0bc4558.chunk.js",
+    "static/css/main.40e7cbdf.chunk.css",
+    "static/js/main.b4763f96.chunk.js"
   ]
 }
