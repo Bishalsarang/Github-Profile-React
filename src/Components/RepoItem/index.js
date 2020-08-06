@@ -43,8 +43,8 @@ const RepoItem = ({ repo, searchText }) => {
         </span>
       </div>
       <div className="dates">
-        <span className="created-at">Created at: {getDayMonth(createdAt)}</span>
-        <span className="updated-at">Updated at: {getDayMonth(updatedAt)}</span>
+        <span className="created-at">Created on {getDayMonth(createdAt)}</span>
+        <span className="updated-at">Updated on {getDayMonth(updatedAt)}</span>
       </div>
     </div>
   );

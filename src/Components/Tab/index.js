@@ -6,6 +6,7 @@ import { BsPeople, BsStar, BsPerson } from 'react-icons/bs';
 
 import Profile from '../Profile';
 import RepoList from '../RepoList';
+import FollowersList from '../FollowersList';
 
 // Import Default Tabs STyle
 import 'react-tabs/style/react-tabs.css';
@@ -24,24 +25,28 @@ const TabNav = ({ className }) => (
 
           <span className="tab__name">Profile</span>
         </Tab>
+
         <Tab>
           <div className="tab__logo">
             <RiGitRepositoryLine />
           </div>
           <span className="tab__name">Repositories</span>
         </Tab>
+
         <Tab>
           <div className="tab__logo">
             <BsPeople />
           </div>
           <span className="tab__name">Followers</span>
         </Tab>
+
         <Tab>
           <div className="tab__logo">
             <RiGitRepositoryLine />
           </div>
           <span className="tab__name">Following</span>
         </Tab>
+
         <Tab>
           <div className="tab__logo">
             <BsStar />
@@ -53,15 +58,19 @@ const TabNav = ({ className }) => (
       <TabPanel>
         <Profile />
       </TabPanel>
+
       <TabPanel>
         <RepoList />
       </TabPanel>
+
       <TabPanel>
-        <h2>Followers</h2>
+        <FollowersList />
       </TabPanel>
+
       <TabPanel>
         <h2>Followings</h2>
       </TabPanel>
+
       <TabPanel>
         <h2>Stars</h2>
       </TabPanel>

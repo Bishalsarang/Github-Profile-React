@@ -50,6 +50,18 @@ const RepoList = ({ repoList, isFetching, setRepoList, setFetchStatus }) => {
     );
   }, [repoList, search, language]);
 
+  const languageSelector = () => {
+    return (
+      <select name="langauges" id="languages" onChange={(e) => setLanguage(e.target[e.target.selectedIndex].text)}>
+        {constant.LANGUAGES.map((language, index) => (
+          <option key={index} style={{ background: constant.MAP_LANGUAGES_TO_COLOR[language] }}>
+            {language}
+          </option>
+        ))}
+      </select>
+    );
+  };
+
   return (
     <div className="RepoList">
       <input
@@ -59,13 +71,7 @@ const RepoList = ({ repoList, isFetching, setRepoList, setFetchStatus }) => {
         onChange={(e) => setSearch(e.target.value)}
       />
 
-      <select name="langauges" id="languages" onChange={(e) => setLanguage(e.target[e.target.selectedIndex].text)}>
-        {constant.LANGUAGES.map((language, index) => (
-          <option key={index} style={{ background: constant.MAP_LANGUAGES_TO_COLOR[language] }}>
-            {language}
-          </option>
-        ))}
-      </select>
+      {languageSelector()}
 
       {isFetching ? (
         <Loader />

@@ -1,0 +1,44 @@
+.UserItem {
+  display: inline-flex;
+  padding: 16px;
+  margin: 0px auto;
+  border-top: 2px solid #e1e4e8;
+}
+
+.UserItem .info {
+  padding: 0px 30px;
+  text-align: start;
+}
+
+.UserItem .avatar__img {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+}
+
+.UserItem .bio {
+  font-size: 12px;
+}
+
+.UserItem .name {
+  color: #24292e;
+  font-size: 16px;
+}
+
+.UserItem .username {
+  color: #586069;
+  font-size: 14px;
+}
+
+.UserItem .work,
+.UserItem .location {
+  font-size: 12px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .UserItem {
+    width: 80%;
+  }
+}

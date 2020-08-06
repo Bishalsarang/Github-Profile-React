@@ -38,6 +38,8 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
     avatar_url: avatarUrl,
     created_at: createdAt,
     public_repos: publicRepos,
+    followers_url: followersUrl,
+    following_url: followingUrl,
   } = profile;
 
   const getUserInfo = async () => {
@@ -69,12 +71,12 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
           </div>
           <h3 className="name">{name}</h3>
           <span className="username">@{login}</span>
+          {bio && <span className="bio"> {bio}</span>}
           {company && (
             <span className="company">
               <BsBriefcase /> {company}
             </span>
           )}
-          {bio && <span className="bio">Bio: {bio}</span>}
           {blog && (
             <span className="blog">
               <a href={blog} title="Website">
@@ -89,8 +91,17 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
               {location}
             </span>
           )}
-          {followers && <span className="followers">Followers: {followers}</span>}
-          {following && <span className="following">Following: {following}</span>}
+          {
+            <a href={followersUrl} title={`${login} followers`}>
+              <span className="followers">Followers: {followers}</span>
+            </a>
+          }
+          {
+            <a href={followingUrl} title={`${login} following`}>
+              <span className="following">Following: {following}</span>
+            </a>
+          }
+
           {publicRepos && (
             <span className="public_repos">
               <RiGitRepositoryLine />
