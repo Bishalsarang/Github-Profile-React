@@ -1,14 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { GoRepoForked, GoStar } from 'react-icons/go';
-
+import Highlight from 'react-highlighter';
 import { getDayMonth } from '../../utils/index';
 import { MAP_LANGUAGES_TO_COLOR } from '../../constants/constants';
 
 import './style.css';
 
-const RepoItem = ({ repo }) => {
+const RepoItem = ({ repo, searchText }) => {
+  // console.log(Highlight);
   const {
     name,
     language,
@@ -23,7 +23,9 @@ const RepoItem = ({ repo }) => {
   return (
     <div className="RepoItem">
       <a href={htmlUrl} title={name} target="_blank" rel="noopener noreferrer">
-        <h3 className="title">{name}</h3>
+        <h3 className="title">
+          <Highlight search={searchText}>{name}</Highlight>
+        </h3>
       </a>
       <p className="desc">{description}</p>
       <div className="meta">

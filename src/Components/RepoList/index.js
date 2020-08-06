@@ -15,6 +15,8 @@ import './style.css';
 
 const RepoList = ({ repoList, isFetching, setRepoList, setFetchStatus }) => {
   const [search, setSearch] = useState('');
+  const [language, setLanguage] = useState('');
+  const [sortBy, setSortBy] = useState('updated');
   const [filteredRepoList, setFilteredRepoList] = useState([]);
 
   const getRepoList = async () => {
@@ -36,8 +38,17 @@ const RepoList = ({ repoList, isFetching, setRepoList, setFetchStatus }) => {
   }, [repoList, setRepoList]);
 
   useEffect(() => {
-    setFilteredRepoList(repoList.filter((repo) => repo.name.toLowerCase().includes(search.toLowerCase())));
-  }, [repoList, search]);
+    setFilteredRepoList(
+      repoList.filter((repo) => {
+        return (
+          repo.name.toLowerCase().includes(search.toLowerCase()) &&
+          (language === '' ||
+            language === 'All' ||
+            (repo.language && repo.language.toLowerCase() === language.toLowerCase()))
+        );
+      }),
+    );
+  }, [repoList, search, language]);
 
   return (
     <div className="RepoList">
@@ -47,13 +58,22 @@ const RepoList = ({ repoList, isFetching, setRepoList, setFetchStatus }) => {
         placeholder="Find a repository"
         onChange={(e) => setSearch(e.target.value)}
       />
+
+      <select name="langauges" id="languages" onChange={(e) => setLanguage(e.target[e.target.selectedIndex].text)}>
+        {constant.LANGUAGES.map((language, index) => (
+          <option key={index} style={{ background: constant.MAP_LANGUAGES_TO_COLOR[language] }}>
+            {language}
+          </option>
+        ))}
+      </select>
+
       {isFetching ? (
         <Loader />
       ) : (
         !isArrayEmpty(repoList) && (
           <ul className="RepoItemList">
             {filteredRepoList.map((repo) => (
-              <RepoItem key={repo.id} repo={repo} />
+              <RepoItem key={repo.id} repo={repo} searchText={search} />
             ))}
           </ul>
         )
