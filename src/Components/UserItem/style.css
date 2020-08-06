@@ -2,6 +2,7 @@
   display: inline-flex;
   padding: 16px;
   margin: 0px auto;
+  width: 100%;
   border-top: 2px solid #e1e4e8;
 }
 

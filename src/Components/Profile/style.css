@@ -22,7 +22,8 @@
 }
 
 .Profile .avatar-img {
-  width: 260px;
+  width: 100%;
+  max-width: 260px;
   border-radius: 50%;
   cursor: pointer;
 }
