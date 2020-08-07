@@ -1,12 +1,12 @@
 import React from 'react';
 
 // Layout Components
-import Main from './shared/Main';
-import Header from './shared/Header';
-import Footer from './shared/Footer';
+import TabNav from './Components/Tab';
+import Main from './Components/common/Main';
+import Header from './Components/common/Header';
+import Footer from './Components/common/Footer';
 
 import './App.css';
-import TabNav from './Components/Tab';
 
 const App = () => (
   <div className="App">
