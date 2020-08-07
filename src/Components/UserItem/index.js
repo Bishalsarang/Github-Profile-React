@@ -7,8 +7,9 @@ import { BsBriefcase } from 'react-icons/bs';
 
 import * as API from '../../Services/API';
 
-import './style.css';
 import { isObjectEmpty } from '../../utils';
+
+import './style.css';
 
 const UserItem = ({ url }) => {
   const [user, setUser] = useState({});

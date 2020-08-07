@@ -1,15 +1,19 @@
 import React, { useEffect } from 'react';
+
 import { connect } from 'react-redux';
 import LazyLoad from 'react-lazyload';
 
-import { setFetchStatus } from '../../actions/fetchActions/index';
-
+import UserItem from '../userItem';
 import Loader from '../common/Loader';
-import * as API from '../../Services/API';
-import * as constant from '../../constants/constants';
+
+import { setFetchStatus } from '../../actions/fetchActions/index';
 import { setFollowersList, setFollowingList } from '../../actions/usersActions';
+
+import * as API from '../../Services/API';
+
+import * as constant from '../../constants/constants';
+
 import { isArrayEmpty } from '../../utils';
-import UserItem from '../UserItem';
 
 const UsersList = (props) => {
   const {
@@ -22,14 +26,14 @@ const UsersList = (props) => {
     selectedComponent,
   } = props;
 
-  let URL = constant.API_FOLLOWING_URL;
-  let setList = setFollowingList;
   let list = followingList;
+  let setList = setFollowingList;
+  let URL = constant.API_FOLLOWING_URL;
 
   if (selectedComponent === 'follower') {
-    URL = constant.API_FOLLOWER_URL;
-    setList = setFollowersList;
     list = followersList;
+    setList = setFollowersList;
+    URL = constant.API_FOLLOWER_URL;
   }
 
   const getUsersList = async () => {

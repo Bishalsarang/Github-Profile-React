@@ -1,8 +1,13 @@
 import React from 'react';
-
-import { GoRepoForked, GoStar } from 'react-icons/go';
 import Highlight from 'react-highlighter';
+
+// Icons
+import { GoRepoForked, GoStar } from 'react-icons/go';
+
+// Utils
 import { getDayMonth } from '../../utils/index';
+
+// Constants
 import { MAP_LANGUAGES_TO_COLOR } from '../../constants/constants';
 
 import './style.css';

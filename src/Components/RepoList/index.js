@@ -1,16 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { connect } from 'react-redux';
+
 import LazyLoad from 'react-lazyload';
+import { connect } from 'react-redux';
 
-import RepoItem from '../RepoItem';
+// UI Components
+import RepoItem from '../repoItem';
 import Loader from '../common/Loader';
-import { isArrayEmpty } from '../../utils';
-import * as constant from '../../constants/constants';
 
+// Actions
 import { setRepoList } from '../../actions/reposActions';
 import { setFetchStatus } from '../../actions/fetchActions';
 
+// Utils
+import { isArrayEmpty } from '../../utils';
+
+// API
 import * as API from '../../Services/API';
+
+// Constants
+import * as constant from '../../constants/constants';
 
 import './style.css';
 

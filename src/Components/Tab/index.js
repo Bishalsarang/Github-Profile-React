@@ -1,18 +1,21 @@
 import React from 'react';
+
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
+// UI Components
+import Profile from '../profile';
+import RepoList from '../repoList';
+import UsersList from '../usersList';
+
+//  Icons
 import { RiGitRepositoryLine } from 'react-icons/ri';
 import { BsPeople, BsStar, BsPerson } from 'react-icons/bs';
 
-import Profile from '../Profile';
-import RepoList from '../RepoList';
-
-// Import Default Tabs STyle
+// Default Style
 import 'react-tabs/style/react-tabs.css';
 
-// Override Default Tabs Style
+// Override default Style
 import './style.css';
-import UsersList from '../UsersList';
 
 const TabNav = ({ className }) => (
   <div className={className}>
