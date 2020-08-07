@@ -1,13 +1,13 @@
 .profile {
   padding: 16px;
   border-radius: 50px;
-  background: #ffffff;
-  box-shadow: 5px 5px 12px #757575, -5px -5px 12px #ffffff;
+  background: var(--card-background-color);
+  box-shadow: 5px 5px 12px var(--card-shadow-color), -5px -5px 12px var(--card-background-color);
 }
 
 .profile .username {
-  color: #666;
-  font-size: 20px;
+  color: var(--profile-username-color);
+  font-size: var(--username-font-size);
   line-height: 24px;
 }
 

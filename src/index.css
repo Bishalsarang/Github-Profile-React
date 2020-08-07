@@ -13,17 +13,30 @@ code {
 :root {
   /* Color Variables */
   --white: white;
-  --salmon: #f9826c;
   --shark: #24292e;
+  --salmon: #f9826c;
+  --boulder: #757575;
   --porcelain: #e8eaec;
   --athens-gray: #e1e4e8;
   --science-blue: #0366d6;
   --shuttle-gray: #586069;
 
   /*  Components and Events Colors*/
-  --header-background-color: #24292e;
+  --profile-username-color: #666;
+  --user-name-color: var(--shark);
+  --card-background-color: #ffffff;
   --tab-hover-color: var(--porcelain);
   --tab-selected-color: var(--salmon);
-  --user-name-color: var(--shark);
+  --card-shadow-color: var(--boulder);
+  --header-background-color: #24292e;
   --user__user-name-color: var(--shuttle-gray);
+
+  /* Fonts */
+  --username-font-size: 20px;
+  --repo-item__title-font-size: 20px;
+  --user-item__bio-font-size: 12px;
+  --user-item__name-font-size: 16px;
+  --user-item__username-font-size: 14px;
+  --user-item__work-font-size: 12px;
+  --user-item__location-font-size: 12px;
 }

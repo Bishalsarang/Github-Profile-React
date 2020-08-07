@@ -6,7 +6,7 @@
 
 .repo-item .title {
   color: var(--science-blue);
-  font-size: 20px;
+  font-size: var(--repo-item__title-font-size);
   font-weight: 600;
   text-align: left;
 }

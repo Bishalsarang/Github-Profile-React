@@ -18,22 +18,22 @@
 }
 
 .user-item .bio {
-  font-size: 12px;
+  font-size: var(--user-item__bio-font-size);
 }
 
 .user-item .name {
   color: var(--user-name-color);
-  font-size: 16px;
+  font-size: var(--user-item__name-font-size);
 }
 
 .user-item .username {
   color: var(--user__user-name-color);
-  font-size: 14px;
+  font-size: var(--user-item__username-font-size);
 }
 
 .user-item .work,
 .user-item .location {
-  font-size: 12px;
+  font-size: var(--user-item__work-font-size);
   display: inline-block;
   margin-right: 10px;
 }
