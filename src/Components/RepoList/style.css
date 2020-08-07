@@ -1,5 +1,5 @@
 .repo-list .search-input {
-  border: 2px solid gray;
+  border: 2px solid var(--athens-gray);
   border-radius: 12px;
   outline: none;
   padding: 10px;

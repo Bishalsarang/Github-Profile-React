@@ -1,11 +1,11 @@
 .repo-item {
   padding: 16px;
   margin: 0px auto;
-  border-top: 2px solid #e1e4e8;
+  border-top: 2px solid var(--athens-gray);
 }
 
 .repo-item .title {
-  color: #0366d6;
+  color: var(--science-blue);
   font-size: 20px;
   font-weight: 600;
   text-align: left;

@@ -1,15 +1,15 @@
 .header {
   padding: 10px;
   display: flex;
-  background: #24292e;
+  background: var(--header-background-color);
 }
 
 .header .logo {
   margin: 15px 0px;
-  fill: white;
+  fill: var(--white);
 }
 
 .header .title {
-  color: white;
+  color: var(--white);
   padding: 10px;
 }

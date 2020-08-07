@@ -5,11 +5,11 @@
 }
 
 .react-tabs__tab:hover {
-  border-bottom: 3px solid #e8eaec;
+  border-bottom: 3px solid var(--tab-hover-color);
 }
 
 .react-tabs__tab--selected {
-  border-bottom: 3px solid #f9826c;
+  border-bottom: 3px solid var(--tab-selected-color);
 }
 
 .react-tabs__tab-list {

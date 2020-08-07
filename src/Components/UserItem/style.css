@@ -3,7 +3,7 @@
   padding: 16px;
   margin: 0px auto;
   width: 100%;
-  border-top: 2px solid #e1e4e8;
+  border-top: 2px solid var(--athens-gray);
 }
 
 .user-item .info {
@@ -22,12 +22,12 @@
 }
 
 .user-item .name {
-  color: #24292e;
+  color: var(--user-name-color);
   font-size: 16px;
 }
 
 .user-item .username {
-  color: #586069;
+  color: var(--user__user-name-color);
   font-size: 14px;
 }
 
