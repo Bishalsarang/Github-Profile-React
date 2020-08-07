@@ -4,7 +4,7 @@ import { GoMarkGithub } from 'react-icons/go';
 import './style.css';
 
 const Header = () => (
-  <header className="Header">
+  <header className="header">
     <a href="https://github.com" title="Github Logo">
       <GoMarkGithub className="logo" size="2em" />
     </a>

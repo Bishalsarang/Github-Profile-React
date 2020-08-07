@@ -26,7 +26,7 @@ const RepoItem = ({ repo, searchText }) => {
   } = repo;
 
   return (
-    <div className="RepoItem">
+    <div className="repo-item">
       <a href={htmlUrl} title={name} target="_blank" rel="noopener noreferrer">
         <h3 className="title">
           <Highlight search={searchText}>{name}</Highlight>

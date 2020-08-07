@@ -82,7 +82,7 @@ const UsersList = (props) => {
     return <Loader />;
   }
 
-  return <div className="UsersList">{selectedComponent === 'follower' ? showFollower() : showFollowing()}</div>;
+  return <div className="users-list">{selectedComponent === 'follower' ? showFollower() : showFollowing()}</div>;
 };
 
 const mapStateToProps = (state) => ({

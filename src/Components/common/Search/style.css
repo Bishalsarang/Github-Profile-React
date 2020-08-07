@@ -1,8 +1,8 @@
-.Search {
+.search {
   padding: 10px;
 }
 
-.Search input {
+.search input {
   border: 2px solid gray;
   border-radius: 12px;
   outline: none;

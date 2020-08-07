@@ -1,39 +1,39 @@
-.RepoItem {
+.repo-item {
   padding: 16px;
   margin: 0px auto;
   border-top: 2px solid #e1e4e8;
 }
 
-.RepoItem .title {
+.repo-item .title {
   color: #0366d6;
   font-size: 20px;
   font-weight: 600;
   text-align: left;
 }
 
-.RepoItem .title:hover {
+.repo-item .title:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 
-.RepoItem .desc {
+.repo-item .desc {
   padding: 10px 0px;
   text-align: start;
 }
 
-.RepoItem .meta {
+.repo-item .meta {
   text-align: left;
   margin-right: 10px;
 }
 
-.RepoItem .language {
+.repo-item .language {
   text-align: left;
   display: inline-block;
   margin-right: 10px;
   cursor: pointer;
 }
 
-.RepoItem .indicator {
+.repo-item .indicator {
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -41,26 +41,26 @@
   margin-right: 10px;
 }
 
-.RepoItem .forks-count {
+.repo-item .forks-count {
   margin-right: 10px;
   cursor: pointer;
 }
 
-.RepoItem .stargazers_count {
+.repo-item .stargazers_count {
   cursor: pointer;
 }
 
-.RepoItem .created-at {
+.repo-item .created-at {
   margin-right: 10px;
 }
 
-.RepoItem .dates {
+.repo-item .dates {
   display: flex;
   justify-content: space-between;
 }
 
 @media (min-width: 768px) {
-  .RepoItem {
+  .repo-item {
     width: 80%;
   }
 }

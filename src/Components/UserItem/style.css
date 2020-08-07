@@ -1,4 +1,4 @@
-.UserItem {
+.user-item {
   display: inline-flex;
   padding: 16px;
   margin: 0px auto;
@@ -6,45 +6,45 @@
   border-top: 2px solid #e1e4e8;
 }
 
-.UserItem .info {
+.user-item .info {
   padding: 0px 30px;
   text-align: start;
 }
 
-.UserItem .avatar__img {
+.user-item .avatar__img {
   width: 66px;
   height: 66px;
   border-radius: 50%;
 }
 
-.UserItem .bio {
+.user-item .bio {
   font-size: 12px;
 }
 
-.UserItem .name {
+.user-item .name {
   color: #24292e;
   font-size: 16px;
 }
 
-.UserItem .username {
+.user-item .username {
   color: #586069;
   font-size: 14px;
 }
 
-.UserItem .work,
-.UserItem .location {
+.user-item .work,
+.user-item .location {
   font-size: 12px;
   display: inline-block;
   margin-right: 10px;
 }
 
-.UserItem .work__icon,
-.UserItem .location__icon {
+.user-item .work__icon,
+.user-item .location__icon {
   padding-right: 8px;
 }
 
 @media (min-width: 768px) {
-  .UserItem {
+  .user-item {
     width: 80%;
   }
 }

@@ -25,7 +25,6 @@ import './style.css';
 const RepoList = ({ repoList, isFetching, setRepoList, setFetchStatus }) => {
   const [search, setSearch] = useState('');
   const [language, setLanguage] = useState('');
-  const [sortBy, setSortBy] = useState('updated');
   const [filteredRepoList, setFilteredRepoList] = useState([]);
 
   const getRepoList = async () => {
@@ -77,7 +76,7 @@ const RepoList = ({ repoList, isFetching, setRepoList, setFetchStatus }) => {
   };
 
   return (
-    <div className="RepoList">
+    <div className="repo-list">
       <input
         className="search-input"
         type="text"
@@ -91,7 +90,7 @@ const RepoList = ({ repoList, isFetching, setRepoList, setFetchStatus }) => {
         <Loader />
       ) : (
         !isArrayEmpty(repoList) && (
-          <ul className="RepoItemList">
+          <ul className="repo-item-list">
             {filteredRepoList.map((repo) => (
               <LazyLoad key={repo.id} placeholder={<Loader />}>
                 <RepoItem key={repo.id} repo={repo} searchText={search} />

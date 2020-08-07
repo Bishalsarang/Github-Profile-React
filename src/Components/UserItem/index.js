@@ -79,7 +79,7 @@ const UserItem = ({ url }) => {
     );
   };
 
-  return <div className="UserItem">{isLoading || isObjectEmpty(user) ? displayLoading() : displayUserInfo()}</div>;
+  return <div className="user-item">{isLoading || isObjectEmpty(user) ? displayLoading() : displayUserInfo()}</div>;
 };
 
 export default UserItem;

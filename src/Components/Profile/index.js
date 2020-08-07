@@ -61,7 +61,7 @@ const Profile = ({ profile, isFetching, setProfile, setFetchStatus }) => {
   }, [setProfile]);
 
   return (
-    <div className="Profile">
+    <div className="profile">
       {isFetching || isObjectEmpty(profile) ? (
         <Loader />
       ) : (
