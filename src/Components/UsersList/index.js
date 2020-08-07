@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import LazyLoad from 'react-lazyload';
 
 import { setFetchStatus } from '../../actions/fetchActions/index';
 
@@ -53,7 +54,9 @@ const UsersList = (props) => {
     return (
       <ul>
         {followersList.map((user) => (
-          <UserItem key={user.id} url={user.url} />
+          <LazyLoad key={user.id} placeholder={<Loader />}>
+            <UserItem key={user.id} url={user.url} />
+          </LazyLoad>
         ))}
       </ul>
     );
@@ -63,7 +66,9 @@ const UsersList = (props) => {
     return (
       <ul>
         {followingList.map((user) => (
-          <UserItem key={user.id} url={user.url} />
+          <LazyLoad key={user.id} placeholder={<Loader />}>
+            <UserItem key={user.id} url={user.url} />
+          </LazyLoad>
         ))}
       </ul>
     );

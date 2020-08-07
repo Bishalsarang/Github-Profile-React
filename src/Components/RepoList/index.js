@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
+import LazyLoad from 'react-lazyload';
 
 import RepoItem from '../RepoItem';
 import Loader from '../common/Loader';
@@ -84,7 +85,9 @@ const RepoList = ({ repoList, isFetching, setRepoList, setFetchStatus }) => {
         !isArrayEmpty(repoList) && (
           <ul className="RepoItemList">
             {filteredRepoList.map((repo) => (
-              <RepoItem key={repo.id} repo={repo} searchText={search} />
+              <LazyLoad key={repo.id} placeholder={<Loader />}>
+                <RepoItem key={repo.id} repo={repo} searchText={search} />
+              </LazyLoad>
             ))}
           </ul>
         )
