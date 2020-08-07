@@ -1,3 +1,7 @@
+/**
+ * Entry point for Reducers: reducers/index.js.
+ * Export  Combined  Reducers.
+ */
 import { combineReducers } from 'redux';
 
 import repoReducer from './repos';

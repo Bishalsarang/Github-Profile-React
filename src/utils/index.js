@@ -1,6 +1,6 @@
 /**
- * Utils.js
- * This file contains utilities function.
+ * Utils/index.js: This file contains utilities function.
+ *
  */
 import moment from 'moment';
 
