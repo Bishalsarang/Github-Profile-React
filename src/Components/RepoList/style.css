@@ -1,0 +1,19 @@
+.repo-list .search-input {
+  border: 2px solid var(--athens-gray);
+  border-radius: 12px;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.repo-list .language-selector {
+  padding: 10px;
+  margin-left: 10px;
+}
+
+@media (min-width: 768px) {
+  .repo-list .search-input {
+    width: 60%;
+  }
+}

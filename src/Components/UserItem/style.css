@@ -1,0 +1,50 @@
+.user-item {
+  display: inline-flex;
+  padding: 16px;
+  margin: 0px auto;
+  width: 100%;
+  border-top: 2px solid var(--athens-gray);
+}
+
+.user-item .info {
+  padding: 0px 30px;
+  text-align: start;
+}
+
+.user-item .avatar__img {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+}
+
+.user-item .bio {
+  font-size: var(--user-item__bio-font-size);
+}
+
+.user-item .name {
+  color: var(--user-name-color);
+  font-size: var(--user-item__name-font-size);
+}
+
+.user-item .username {
+  color: var(--user__user-name-color);
+  font-size: var(--user-item__username-font-size);
+}
+
+.user-item .work,
+.user-item .location {
+  font-size: var(--user-item__work-font-size);
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.user-item .work__icon,
+.user-item .location__icon {
+  padding-right: 8px;
+}
+
+@media (min-width: 768px) {
+  .user-item {
+    width: 80%;
+  }
+}

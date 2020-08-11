@@ -1,0 +1,26 @@
+.react-tabs__tab {
+  border: 0;
+  display: inline-flex;
+  padding: 6px 16px;
+}
+
+.react-tabs__tab:hover {
+  border-bottom: 3px solid var(--tab-hover-color);
+}
+
+.react-tabs__tab--selected {
+  border-bottom: 3px solid var(--tab-selected-color);
+}
+
+.react-tabs__tab-list {
+  border-bottom: 0px;
+  padding: 0px 10px;
+}
+
+.tab__logo {
+  padding: 10px 10px;
+}
+
+.tab__name {
+  padding: 10px 0px;
+}

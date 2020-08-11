@@ -1,13 +1,42 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+:root {
+  /* Color Variables */
+  --white: white;
+  --shark: #24292e;
+  --salmon: #f9826c;
+  --boulder: #757575;
+  --porcelain: #e8eaec;
+  --athens-gray: #e1e4e8;
+  --science-blue: #0366d6;
+  --shuttle-gray: #586069;
+
+  /*  Components and Events Colors*/
+  --profile-username-color: #666;
+  --user-name-color: var(--shark);
+  --card-background-color: #ffffff;
+  --tab-hover-color: var(--porcelain);
+  --tab-selected-color: var(--salmon);
+  --card-shadow-color: var(--boulder);
+  --header-background-color: #24292e;
+  --user__user-name-color: var(--shuttle-gray);
+
+  /* Fonts */
+  --username-font-size: 20px;
+  --repo-item__title-font-size: 20px;
+  --user-item__bio-font-size: 12px;
+  --user-item__name-font-size: 16px;
+  --user-item__username-font-size: 14px;
+  --user-item__work-font-size: 12px;
+  --user-item__location-font-size: 12px;
 }

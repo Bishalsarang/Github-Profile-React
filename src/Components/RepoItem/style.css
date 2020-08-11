@@ -1,0 +1,66 @@
+.repo-item {
+  padding: 16px;
+  margin: 0px auto;
+  border-top: 2px solid var(--athens-gray);
+}
+
+.repo-item .title {
+  color: var(--science-blue);
+  font-size: var(--repo-item__title-font-size);
+  font-weight: 600;
+  text-align: left;
+}
+
+.repo-item .title:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.repo-item .desc {
+  padding: 10px 0px;
+  text-align: start;
+}
+
+.repo-item .meta {
+  text-align: left;
+  margin-right: 10px;
+}
+
+.repo-item .language {
+  text-align: left;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.repo-item .indicator {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.repo-item .forks-count {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.repo-item .stargazers_count {
+  cursor: pointer;
+}
+
+.repo-item .created-at {
+  margin-right: 10px;
+}
+
+.repo-item .dates {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .repo-item {
+    width: 80%;
+  }
+}

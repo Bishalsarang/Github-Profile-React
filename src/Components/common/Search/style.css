@@ -1,0 +1,10 @@
+.search {
+  padding: 10px;
+}
+
+.search input {
+  border: 2px solid gray;
+  border-radius: 12px;
+  outline: none;
+  padding: 10px;
+}
